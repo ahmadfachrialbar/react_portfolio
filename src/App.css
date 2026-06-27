@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark-theme, .dark-theme *));
+
+@theme {
+  --font-sans: 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Geist Mono', Menlo, Monaco, 'Liberation Mono', monospace;
+  --color-gray-100: var(--gray-100);
+  --color-gray-200: var(--gray-200);
+  --color-gray-300: var(--gray-300);
+  --color-gray-400: var(--gray-400);
+  --color-gray-500: var(--gray-500);
+  --color-gray-600: var(--gray-600);
+  --color-gray-700: var(--gray-700);
+  --color-gray-800: var(--gray-800);
+  --color-gray-900: var(--gray-900);
+  --color-gray-1000: var(--gray-1000);
+  --color-blue-900: var(--blue-900);
+  --color-purple-900: var(--purple-900);
+  --color-background-100: var(--background-100);
+  --color-background-200: var(--background-200);
+  --radius-radius: var(--radius);
+  --radius-full: 9999px;
+}
+
+@layer base {
+  :root {
+    --gray-100: hsl(0,0%,10%); --gray-200: hsl(0,0%,12%);
+    --gray-300: hsl(0,0%,16%); --gray-400: hsl(0,0%,18%);
+    --gray-500: hsl(0,0%,27%); --gray-600: hsl(0,0%,53%);
+    --gray-700: hsl(0,0%,56%); --gray-800: hsl(0,0%,49%);
+    --gray-900: hsl(0,0%,63%); --gray-1000: hsl(0,0%,93%);
+    --blue-900: hsl(211,100%,65%);
+    --purple-900: hsl(269,100%,70%);
+    --background-100: hsl(0,0%,4%);
+    --background-200: #000;
+    --alpha-400: rgba(255,255,255,0.08);
+    --glow: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(255,255,255,0.04), transparent);
+    --glow-rgb: 100, 140, 255;
+    --header-height: 64px;
+    --radius: 12px;
+  }
+
+  .light-theme {
+    --gray-100: hsl(0,0%,95%); --gray-200: hsl(0,0%,93%);
+    --gray-300: hsl(0,0%,91%); --gray-400: hsl(0,0%,89%);
+    --gray-500: hsl(0,0%,79%); --gray-600: hsl(0,0%,62%);
+    --gray-700: hsl(0,0%,59%); --gray-800: hsl(0,0%,53%);
+    --gray-900: hsl(0,0%,39%); --gray-1000: hsl(0,0%,9%);
+    --blue-900: hsl(211,100%,43%);
+    --purple-900: hsl(269,79%,51%);
+    --background-100: #fff;
+    --background-200: hsl(0,0%,98%);
+    --alpha-400: rgba(0,0,0,0.08);
+    --glow: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0,0,0,0.06), transparent);
+    --glow-rgb: 80, 80, 200;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--background-200);
+    color: var(--gray-1000);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    line-height: 1.5;
+  }
+}

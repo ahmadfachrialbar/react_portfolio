@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" class="dark-theme">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://api.fonts.coollabs.io" />
+    <link href="https://api.fonts.coollabs.io/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
+    <link href="https://api.fonts.coollabs.io/css2?family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet" />
+    <title>Ahmad Fachri Albar - Portfolio</title>
+    <script>
+      (function() {
+        var theme = 'dark';
+        try { theme = localStorage.getItem('portfolio-theme') || 'dark'; } catch(e) {}
+        document.documentElement.className = theme === 'light' ? 'light-theme' : 'dark-theme';
+        document.documentElement.style.colorScheme = theme;
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
